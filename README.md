@@ -19,7 +19,7 @@ Region: eu-west-1 (Primary Site)
 
 Infrastructure: 
 - Four AWS VMs host a k3s cluster.
-- - An S3 bucket (backup-bucket-ew1) is dedicated to storing physical backups from the primary database cluster.
+- An S3 bucket (backup-bucket-ew1) is dedicated to storing physical backups from the primary database cluster.
 Database (postgres-cluster):
 - A 3-node, highly available PostgreSQL cluster is deployed, managed by the CloudNativePG operator.
 - This cluster runs on the data plane nodes of the k3s cluster.
