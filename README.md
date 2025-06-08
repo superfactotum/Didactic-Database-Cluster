@@ -59,3 +59,13 @@ All the ansible playbook may be launched as follows:
 ansible-playbook -i inventory.ini --key keyfile playbook.yml
 
 Or following different strategies according to the security requirements
+
+--
+
+All the terraform files may be launched as follows:
+
+terraform init
+terraform plan
+terraform apply
+
+Or following different strategies according to the security requirements
