@@ -26,6 +26,7 @@ Database (postgres-cluster):
 - Physical Backups: Continuous Write-Ahead Log (WAL) archiving and daily full physical backups of postgres-cluster are configured, with backups stored in s3://backup-bucket-ew1/physical/.
 - Logical Backups: Daily logical backups (using pg_dump) of the app_db database from postgres-cluster are scheduled (at 04:00 UTC). These dumps are stored in an S3 bucket located in the eu-west-2 region: s3://backup_bucket_ew1/dumps/.
 
+
 Region: eu-west-2 (Disaster Recovery Site)
 
 Infrastructure: 
