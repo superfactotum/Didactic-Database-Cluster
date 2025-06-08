@@ -44,6 +44,8 @@ Key Architectural Aspects:
 - Comprehensive Backup Strategy: The system employs both physical backups (for Point-In-Time Recovery) and logical backups (for database-level granularity and migration).
 - CloudNativePG Automation: Database provisioning, management, and backup processes are largely automated by the CloudNativePG operator.
 
-![Screenshot at 2025-06-08 15-06-11](https://github.com/user-attachments/assets/f5b2c657-9a08-48f0-a04c-e0cfcae36ea5)
+
+![Screenshot at 2025-06-08 15-40-52](https://github.com/user-attachments/assets/399dcd4a-a78a-47cf-ac2d-8f6d57b95efc)
+
 
 
