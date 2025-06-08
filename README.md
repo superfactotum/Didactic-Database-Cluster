@@ -1,7 +1,7 @@
 # Didactic-Database-Cluster
 
 The following code has been written only for didactic purpose.
-It is not deplayable in a production environment!!!
+The code is not deplayable in a production environment!!!
 
 This code is not structured to be run in different environments and many production features are just missing.
 
