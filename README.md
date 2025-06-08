@@ -47,7 +47,8 @@ Key Architectural Aspects:
 
 
 
-![Screenshot at 2025-06-08 16-03-58](https://github.com/user-attachments/assets/8d926126-cdc8-41e3-9da7-5fda9d4d7249)
+![Screenshot at 2025-06-08 16-05-57](https://github.com/user-attachments/assets/9f2e373b-5939-47d3-959c-5e4bd197cbbf)
+
 
 
 
