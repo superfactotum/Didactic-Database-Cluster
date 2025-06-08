@@ -54,4 +54,8 @@ To be used in case of disaster recovery to point to the DR recovery database
 
 
 
+All the ansible playbook may be launched as follows:
 
+ansible-playbook -i inventory.ini --key keyfile playbook.yml
+
+Or following different strategies according to the security requirements
