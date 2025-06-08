@@ -1,11 +1,11 @@
 # Didactic-Database-Cluster
 
-The following code has been written only for didactic purpose.
+The following code has been written only for didactic purposes.
 The code is not deplayable in a production environment!!!
 
 This code is not structured to be run in different environments and many production features are just missing.
 
-Also, it has not even tested, as an AWS account would be necessary to do that.
+Also, it has not even been tested, as an AWS account would be necessary to do that.
 
 It may be useful just to suggest ideas on how a production system could be created.
 
