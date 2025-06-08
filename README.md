@@ -45,7 +45,8 @@ Key Architectural Aspects:
 - CloudNativePG Automation: Database provisioning, management, and backup processes are largely automated by the CloudNativePG operator.
 
 
-![Screenshot at 2025-06-08 15-40-52](https://github.com/user-attachments/assets/399dcd4a-a78a-47cf-ac2d-8f6d57b95efc)
+
+![Screenshot at 2025-06-08 15-42-30](https://github.com/user-attachments/assets/121d20b3-3791-4086-9322-227e63ba4a12)
 
 
 
