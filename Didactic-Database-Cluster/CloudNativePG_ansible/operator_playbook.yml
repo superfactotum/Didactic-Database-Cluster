@@ -1,0 +1,6 @@
+---
+- name: Deploy CloudNativePG Operator
+  hosts: control_plane 
+  gather_facts: no
+  roles:
+    - cloudnativepg_operator

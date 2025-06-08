@@ -1,0 +1,19 @@
+
+- name: Apply common configuration to all K3s nodes
+  hosts: k3s_cluster
+  become: yes
+  roles:
+    - common
+
+- name: Setup K3s Control Plane
+  hosts: control_plane
+  become: yes
+  roles:
+    - k3s_control_plane
+
+- name: Setup K3s Data Plane (Worker Nodes)
+  hosts: data_planes
+  become: yes
+  roles:
+    - k3s_data_plane
+

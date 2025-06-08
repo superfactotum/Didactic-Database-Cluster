@@ -1,0 +1,59 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: postgres-cluster-dr
+  namespace: default 
+spec:
+  instances: 1
+  primaryUpdateStrategy: unsupervised
+
+  storage:
+    size: "20Gi" 
+    storageClass: "local-path" 
+
+  superuserSecret:
+    name: postgres-superuser-secret
+
+  bootstrap:
+    recovery:
+      source: primary-cluster-ew1  
+
+  externalClusters:
+    - name: postgres-primary
+      barmanObjectStore:
+        destinationPath: "s3://backup_bucket_ew1/physical/" 
+        s3Credentials:
+          accessKeyId:
+            name: aws-credentials 
+            key: AWS_ACCESS_KEY_ID
+          secretAccessKey:
+            name: aws-credentials
+            key: AWS_SECRET_ACCESS_KEY
+        wal:
+          compression: gzip 
+
+
+  service:
+    type: LoadBalancer 
+
+  # Configuration for physical backups (WAL archiving and full backups)
+  backup:
+    retentionPolicy: "30d" 
+    barmanObjectStore:
+      destinationPath: "s3://backup_bucket_ew2/physical-dr/" 
+      s3Credentials:
+        accessKeyId:
+          name: aws-credentials
+          key: AWS_ACCESS_KEY_ID
+        secretAccessKey:
+          name: aws-credentials
+          key: AWS_SECRET_ACCESS_KEY
+      wal:
+        compression: gzip
+        maxParallel: 2 
+      # Schedule for full physical backups
+      fullBackupSchedule: "0 3 * * *" # Daily at 02:00 UTC
+
+  monitoring:
+    enablePodMonitor: true
+    

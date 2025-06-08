@@ -1,0 +1,34 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: ScheduledBackup
+metadata:
+  name: daily-logical-appdb-backup
+  namespace: default # Adjust namespace if needed
+spec:
+  # Schedule to run daily at 03:00 UTC
+  schedule: "0 3 * * *"
+  # Target the primary instance of the cluster for the backup
+  target: primary
+  # Create an immediate backup if the schedule is missed (e.g., due to downtime)
+  immediate: true
+  cluster:
+    name: postgres-cluster 
+
+  
+  backupTemplate:
+    spec:
+      
+      type: logical # pg_dump
+      databaseName: app_db
+
+      # Configuration for storing the dumps in S3
+      barmanObjectStore:
+        destinationPath: "s3://backup_bucket_ew1/dumps/" # Path for logical dumps
+        s3Credentials:
+          accessKeyId:
+            name: aws-credentials 
+            key: AWS_ACCESS_KEY_ID
+          secretAccessKey:
+            name: aws-credentials 
+            key: AWS_SECRET_ACCESS_KEY
+        retentionPolicy: "30d"
+       
