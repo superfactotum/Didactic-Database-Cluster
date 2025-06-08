@@ -45,6 +45,9 @@ Key Architectural Aspects:
 - CloudNativePG Automation: Database provisioning, management, and backup processes are largely automated by the CloudNativePG operator.
 
 
+DNS Alias:
+
+To be used in case of disaster recovery to point to the DR recovery database
 
 
 ![Screenshot at 2025-06-08 16-05-57](https://github.com/user-attachments/assets/9f2e373b-5939-47d3-959c-5e4bd197cbbf)
