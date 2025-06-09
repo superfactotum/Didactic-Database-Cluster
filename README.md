@@ -73,4 +73,4 @@ Or following different strategies according to the security requirements
 
 To apply the yml files and create the CRs use kubectl
 
-- kubectl apply -f file
+- kubectl apply -f file.yml
