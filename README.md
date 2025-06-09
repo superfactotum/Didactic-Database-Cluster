@@ -64,9 +64,9 @@ Or following different strategies according to the security requirements
 
 All the terraform files may be launched as follows:
 
-terraform init
-terraform plan
-terraform apply
+- terraform init
+- terraform plan
+- terraform apply
 
 Or following different strategies according to the security requirements
 
