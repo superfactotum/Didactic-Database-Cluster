@@ -74,3 +74,9 @@ Or following different strategies according to the security requirements
 To apply the yml files and create the CRs use kubectl
 
 - kubectl apply -f file.yml
+
+To avoid passing AWS secret in the code it is sufficient running ansible and terraform from a server with a proper role attached.
+
+Ansible vault may also be used if required by security rules
+
+
